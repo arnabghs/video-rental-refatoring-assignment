@@ -2,20 +2,20 @@ package com.twu.refactor;
 
 import java.util.ArrayList;
 
-public class Customer {
+class Customer {
 
   private String name;
-  private ArrayList<Rental> rentalList = new ArrayList<Rental>();
+  private ArrayList<Rental> rentalList = new ArrayList<>();
 
-  public Customer(String name) {
+  Customer(String name) {
     this.name = name;
   }
 
-  public void addRental(Rental arg) {
+  void addRental(Rental arg) {
     rentalList.add(arg);
   }
 
-  public String statement() {
+  String statement() {
     double totalAmount = 0;
     int frequentRenterPoints = 0;
     StringBuilder result = new StringBuilder("Rental Record for " + this.name + "\n");
@@ -28,7 +28,6 @@ public class Customer {
       frequentRenterPoints += rental.updateFrequentRenterPoints();
       totalAmount += movieRent;
     }
-
     result.append(appendFooterLines(totalAmount, frequentRenterPoints));
     return result.toString();
   }

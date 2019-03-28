@@ -21,4 +21,3 @@ class Movie {
     return title;
   }
 }
-
