@@ -1,24 +1,24 @@
 package com.twu.refactor;
 
-public class Movie {
-	private String title;
-	private MovieCategories category;
+class Movie {
+  private String title;
+  private MovieCategories category;
 
-	public Movie(String title, MovieCategories category) {
-		this.title = title;
-		this.category = category;
-	}
+  Movie(String title, MovieCategories category) {
+    this.title = title;
+    this.category = category;
+  }
 
-	public void setCategory(MovieCategories category){
-		this.category = category;
-	}
+  MovieCategories getCategory() {
+    return category;
+  }
 
-	public MovieCategories getCategory() {
-		return category;
-	}
+  void setCategory(MovieCategories category) {
+    this.category = category;
+  }
 
-	public String getTitle () {
-		return title;
-	}
+  String getTitle() {
+    return title;
+  }
 }
 

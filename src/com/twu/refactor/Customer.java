@@ -21,12 +21,11 @@ public class Customer {
     StringBuilder result = new StringBuilder("Rental Record for " + this.name + "\n");
 
     for (Rental rental : rentalList) {
-      int daysRented = rental.getDaysRented();
-      Movie movie = rental.getMovie();
-      double movieRent = getRentForEachMovie(movie, daysRented);
+      String movieName = rental.getMovieTitle();
+      double movieRent = rental.getRentForEachMovie();
 
-      result.append(appendEachMovieDetails(movie, movieRent));
-      frequentRenterPoints += updateFrequentRenterPoints(movie, daysRented);
+      result.append(appendEachMovieDetails(movieName, movieRent));
+      frequentRenterPoints += rental.updateFrequentRenterPoints();
       totalAmount += movieRent;
     }
 
@@ -34,37 +33,11 @@ public class Customer {
     return result.toString();
   }
 
-  private double getRentForEachMovie(Movie movie, int daysRented) {
-    double initialAmount = movie.getCategory().getInitialAmount();
-    int baseDays = movie.getCategory().getBaseDays();
-    double extraCharge = movie.getCategory().getExtraCharge();
-    return calculateRent(initialAmount, daysRented, baseDays, extraCharge);
-  }
-
   private String appendFooterLines(double totalAmount, int frequentRenterPoints) {
     return "Amount owed is " + totalAmount + "\nYou earned " + frequentRenterPoints + " frequent renter points";
   }
 
-  private String appendEachMovieDetails(Movie movie, double thisAmount) {
-    return "\t" + movie.getTitle() + "\t" + thisAmount + "\n";
-  }
-
-  private double chargeForExtraDays(int daysRented, int baseDays, double ratePerDay) {
-    if (daysRented > baseDays) {
-      return (daysRented - baseDays) * ratePerDay;
-    }
-    return 0;
-  }
-
-  private double calculateRent(double initialAmount, int daysRented, int baseDays, double extraCharge) {
-    double chargeForExtraDays = chargeForExtraDays(daysRented, baseDays, extraCharge);
-    return initialAmount + chargeForExtraDays;
-  }
-
-  private int updateFrequentRenterPoints(Movie movie, int daysRented) {
-    if ((movie.getCategory() == MovieCategories.NEW_RELEASE) && daysRented > 1) {
-      return 2;
-    }
-    return 1;
+  private String appendEachMovieDetails(String movieName, double thisAmount) {
+    return "\t" + movieName + "\t" + thisAmount + "\n";
   }
 }
