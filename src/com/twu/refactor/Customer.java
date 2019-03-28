@@ -23,19 +23,22 @@ public class Customer {
     for (Rental rental : rentalList) {
       int daysRented = rental.getDaysRented();
       Movie movie = rental.getMovie();
+      double movieRent = getRentForEachMovie(movie, daysRented);
 
-      double initialAmount = movie.getCategory().getInitialAmount();
-      int baseDays = movie.getCategory().getBaseDays();
-      double extraCharge = movie.getCategory().getExtraCharge();
-      double thisAmount = calculateRent(initialAmount, daysRented, baseDays, extraCharge);
-
-      result.append(appendEachMovieDetails(rental.getMovie(), thisAmount));
-      frequentRenterPoints += updateFrequentRenterPoints(rental.getMovie(), daysRented);
-      totalAmount += thisAmount;
+      result.append(appendEachMovieDetails(movie, movieRent));
+      frequentRenterPoints += updateFrequentRenterPoints(movie, daysRented);
+      totalAmount += movieRent;
     }
 
     result.append(appendFooterLines(totalAmount, frequentRenterPoints));
     return result.toString();
+  }
+
+  private double getRentForEachMovie(Movie movie, int daysRented) {
+    double initialAmount = movie.getCategory().getInitialAmount();
+    int baseDays = movie.getCategory().getBaseDays();
+    double extraCharge = movie.getCategory().getExtraCharge();
+    return calculateRent(initialAmount, daysRented, baseDays, extraCharge);
   }
 
   private String appendFooterLines(double totalAmount, int frequentRenterPoints) {
