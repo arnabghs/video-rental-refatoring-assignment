@@ -24,7 +24,7 @@ public class Customer {
     double totalAmount = 0;
     int frequentRenterPoints = 0;
 
-    int daysRented;
+    int daysRented = 0;
     int baseDays;
     double extraCharge;
     double initialAmount;
@@ -44,7 +44,7 @@ public class Customer {
           baseDays = 2;
           extraCharge = 1.5;
 
-          thisAmount += calculateRent(initialAmount, daysRented, baseDays, extraCharge);
+          thisAmount = calculateRent(initialAmount, daysRented, baseDays, extraCharge);
           break;
 
         case Movie.NEW_RELEASE:
@@ -52,7 +52,7 @@ public class Customer {
           initialAmount = 0;
           baseDays = 0;
           extraCharge = 3;
-          thisAmount += calculateRent(initialAmount, daysRented, baseDays, extraCharge);
+          thisAmount = calculateRent(initialAmount, daysRented, baseDays, extraCharge);
           break;
 
         case Movie.CHILDRENS:
@@ -61,25 +61,18 @@ public class Customer {
           baseDays = 3;
           extraCharge = 1.5;
 
-          thisAmount += calculateRent(initialAmount, daysRented, baseDays, extraCharge);
+          thisAmount = calculateRent(initialAmount, daysRented, baseDays, extraCharge);
           break;
       }
 
-      // add frequent renter points
-      frequentRenterPoints++;
-      // add bonus for a two day new release rental
-      if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE)
-              && each.getDaysRented() > 1)
-        frequentRenterPoints++;
+      frequentRenterPoints += updateFrequentRenterPoints(each.getMovie(), daysRented);
 
-      // show figures for this rental
-      result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(thisAmount) + "\n";
+      result += "\t" + each.getMovie().getTitle() + "\t" + thisAmount + "\n";
       totalAmount += thisAmount;
     }
     // add footer lines
-    result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
-    result += "You earned " + String.valueOf(frequentRenterPoints)
-            + " frequent renter points";
+    result += "Amount owed is " + totalAmount + "\n";
+    result += "You earned " + frequentRenterPoints + " frequent renter points";
     return result;
   }
 
@@ -90,9 +83,16 @@ public class Customer {
     return 0;
   }
 
-  private double calculateRent(double initialAmount, int daysRented, int baseDays, double extraCharge){
+  private double calculateRent(double initialAmount, int daysRented, int baseDays, double extraCharge) {
     double chargeForExtraDays = chargeForExtraDays(daysRented, baseDays, extraCharge);
     return initialAmount + chargeForExtraDays;
+  }
+
+  private int updateFrequentRenterPoints(Movie movie ,int daysRented){
+    if ((movie.getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1) {
+      return 2;
+    }
+    return 1;
   }
 
 }
