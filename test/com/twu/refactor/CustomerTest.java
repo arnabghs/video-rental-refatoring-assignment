@@ -37,7 +37,6 @@ public class CustomerTest extends TestCase {
   }
 
   public void testChange() throws Exception {
-//    la.setPriceCode(Movie.REGULAR);
     la.setCategory(MovieCategories.REGULAR);
     equalsFile("1st Output", "outputChange", dinsdale.statement());
   }
