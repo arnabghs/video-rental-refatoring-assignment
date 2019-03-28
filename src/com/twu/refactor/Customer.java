@@ -30,7 +30,7 @@ public class Customer {
     double initialAmount;
 
     Iterator<Rental> rentals = rentalList.iterator();
-    String result = "Rental Record for " + getName() + "\n";
+    StringBuilder result = new StringBuilder("Rental Record for " + getName() + "\n");
 
     while (rentals.hasNext()) {
       double thisAmount = 0;
@@ -64,16 +64,18 @@ public class Customer {
           thisAmount = calculateRent(initialAmount, daysRented, baseDays, extraCharge);
           break;
       }
-
       frequentRenterPoints += updateFrequentRenterPoints(each.getMovie(), daysRented);
-
-      result += "\t" + each.getMovie().getTitle() + "\t" + thisAmount + "\n";
+      result.append(appendEachMovieDetails(each.getMovie(), thisAmount));
       totalAmount += thisAmount;
     }
     // add footer lines
-    result += "Amount owed is " + totalAmount + "\n";
-    result += "You earned " + frequentRenterPoints + " frequent renter points";
-    return result;
+    result.append("Amount owed is ").append(totalAmount).append("\n");
+    result.append("You earned ").append(frequentRenterPoints).append(" frequent renter points");
+    return result.toString();
+  }
+
+  private String appendEachMovieDetails(Movie movie, double thisAmount) {
+    return "\t" + movie.getTitle() + "\t" + thisAmount + "\n";
   }
 
   private double chargeForExtraDays(int daysRented, int baseDays, double ratePerDay) {
@@ -88,7 +90,7 @@ public class Customer {
     return initialAmount + chargeForExtraDays;
   }
 
-  private int updateFrequentRenterPoints(Movie movie ,int daysRented){
+  private int updateFrequentRenterPoints(Movie movie, int daysRented) {
     if ((movie.getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1) {
       return 2;
     }
