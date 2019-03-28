@@ -13,11 +13,11 @@ public class CustomerTest extends TestCase {
 
   private Customer dinsdale = new Customer("Dinsdale Pirhana");
 
-  private Movie python = new Movie("Monty Python and the Holy Grail", Movie.REGULAR);
-  private Movie ran = new Movie("Ran", Movie.REGULAR);
-  private Movie la = new Movie("LA Confidential", Movie.NEW_RELEASE);
-  private Movie trek = new Movie("Star Trek 13.2", Movie.NEW_RELEASE);
-  private Movie wallace = new Movie("Wallace and Gromit", Movie.CHILDRENS);
+  private Movie python = new Movie("Monty Python and the Holy Grail", MovieCategories.REGULAR);
+  private Movie ran = new Movie("Ran", MovieCategories.REGULAR);
+  private Movie la = new Movie("LA Confidential", MovieCategories.NEW_RELEASE);
+  private Movie trek = new Movie("Star Trek 13.2", MovieCategories.NEW_RELEASE);
+  private Movie wallace = new Movie("Wallace and Gromit", MovieCategories.CHILDRENS);
 
   public void setUp() {
     dinsdale.addRental(new Rental(python, 3));
@@ -37,7 +37,8 @@ public class CustomerTest extends TestCase {
   }
 
   public void testChange() throws Exception {
-    la.setPriceCode(Movie.REGULAR);
+//    la.setPriceCode(Movie.REGULAR);
+    la.setCategory(MovieCategories.REGULAR);
     equalsFile("1st Output", "outputChange", dinsdale.statement());
   }
 
