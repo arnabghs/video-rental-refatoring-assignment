@@ -68,10 +68,12 @@ public class Customer {
       result.append(appendEachMovieDetails(each.getMovie(), thisAmount));
       totalAmount += thisAmount;
     }
-    // add footer lines
-    result.append("Amount owed is ").append(totalAmount).append("\n");
-    result.append("You earned ").append(frequentRenterPoints).append(" frequent renter points");
+    result.append(appendFooterLines(totalAmount, frequentRenterPoints));
     return result.toString();
+  }
+
+  private String appendFooterLines(double totalAmount, int frequentRenterPoints) {
+    return "Amount owed is " + totalAmount + "\nYou earned " + frequentRenterPoints + " frequent renter points";
   }
 
   private String appendEachMovieDetails(Movie movie, double thisAmount) {
