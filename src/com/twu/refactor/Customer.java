@@ -27,6 +27,7 @@ public class Customer {
     int daysRented;
     int baseDays;
     double extraCharge;
+    double initialAmount;
 
     Iterator<Rental> rentals = rentalList.iterator();
     String result = "Rental Record for " + getName() + "\n";
@@ -38,26 +39,29 @@ public class Customer {
       // determine amounts for each line
       switch (each.getMovie().getPriceCode()) {
         case Movie.REGULAR:
-          thisAmount += 2;
+          initialAmount = 2;
           daysRented = each.getDaysRented();
           baseDays = 2;
           extraCharge = 1.5;
 
-          thisAmount += chargeForExtraDays(daysRented, baseDays, extraCharge);
+          thisAmount += calculateRent(initialAmount, daysRented, baseDays, extraCharge);
           break;
 
         case Movie.NEW_RELEASE:
           daysRented = each.getDaysRented();
-          thisAmount += daysRented * 3;
+          initialAmount = 0;
+          baseDays = 0;
+          extraCharge = 3;
+          thisAmount += calculateRent(initialAmount, daysRented, baseDays, extraCharge);
           break;
 
         case Movie.CHILDRENS:
-          thisAmount += 1.5;
+          initialAmount = 1.5;
           daysRented = each.getDaysRented();
           baseDays = 3;
           extraCharge = 1.5;
 
-          thisAmount += chargeForExtraDays(daysRented, baseDays, extraCharge);
+          thisAmount += calculateRent(initialAmount, daysRented, baseDays, extraCharge);
           break;
       }
 
@@ -86,6 +90,10 @@ public class Customer {
     return 0;
   }
 
+  private double calculateRent(double initialAmount, int daysRented, int baseDays, double extraCharge){
+    double chargeForExtraDays = chargeForExtraDays(daysRented, baseDays, extraCharge);
+    return initialAmount + chargeForExtraDays;
+  }
 
 }
 

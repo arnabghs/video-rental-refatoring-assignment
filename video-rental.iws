@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0200ab8f-6f84-4ffc-b147-707bb13feec5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/com/twu/refactor/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/refactor/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-rental.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/video-rental.ipr" afterDir="false" />
     </list>
     <ignored path="video-rental.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/refactor/CustomerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="231">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -85,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+            <state relative-caret-position="99">
+              <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
               <folding>
                 <element signature="e#348#349#0" expanded="true" />
                 <element signature="e#371#372#0" expanded="true" />
@@ -102,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="33">
+              <caret line="49" column="10" lean-forward="true" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,7 +196,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553761350571" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553762482857" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
@@ -357,6 +356,12 @@
     <history-entry file="CustomerTest - 2019.03.28 at 13h 33m 14s.xml">
       <configuration name="CustomerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CustomerTest - 2019.03.28 at 13h 52m 04s.xml">
+      <configuration name="CustomerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerTest - 2019.03.28 at 13h 52m 32s.xml">
+      <configuration name="CustomerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -372,7 +377,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.55526656" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.55266577" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,8 +441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state relative-caret-position="99">
+          <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
           <folding>
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#371#372#0" expanded="true" />
@@ -451,8 +456,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="33">
+          <caret line="49" column="10" lean-forward="true" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -461,8 +466,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/refactor/CustomerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="231">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
