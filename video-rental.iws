@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0200ab8f-6f84-4ffc-b147-707bb13feec5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/refactor/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/refactor/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/refactor/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/refactor/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/refactor/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/refactor/CustomerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-rental.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/video-rental.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-rental.iws" beforeDir="false" afterPath="$PROJECT_DIR$/video-rental.iws" afterDir="false" />
     </list>
     <ignored path="video-rental.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Rental.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="99">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -86,8 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state>
               <folding>
                 <element signature="e#589#590#0" expanded="true" />
                 <element signature="e#614#615#0" expanded="true" />
@@ -103,7 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/MovieCategories.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="644">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#453#454#0" expanded="true" />
                 <element signature="e#483#484#0" expanded="true" />
@@ -119,10 +120,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="27" column="86" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+            <state>
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#257#258#0" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -211,7 +214,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553768313381" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553770114989" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
@@ -365,21 +368,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CustomerTest - 2019.03.28 at 14h 44m 59s.xml">
-      <configuration name="CustomerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerTest - 2019.03.28 at 14h 48m 44s.xml">
-      <configuration name="CustomerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerTest - 2019.03.28 at 14h 54m 47s.xml">
-      <configuration name="CustomerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerTest - 2019.03.28 at 14h 57m 24s.xml">
-      <configuration name="CustomerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerTest - 2019.03.28 at 14h 58m 27s.xml">
-      <configuration name="CustomerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CustomerTest - 2019.03.28 at 15h 17m 11s.xml">
       <configuration name="CustomerTest" configurationId="JUnit" />
     </history-entry>
@@ -393,6 +381,21 @@
       <configuration name="CustomerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CustomerTest - 2019.03.28 at 15h 46m 46s.xml">
+      <configuration name="CustomerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerTest - 2019.03.28 at 15h 48m 39s.xml">
+      <configuration name="CustomerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerTest - 2019.03.28 at 16h 01m 42s.xml">
+      <configuration name="CustomerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerTest - 2019.03.28 at 16h 14m 46s.xml">
+      <configuration name="CustomerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerTest - 2019.03.28 at 16h 15m 30s.xml">
+      <configuration name="CustomerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerTest - 2019.03.28 at 16h 18m 40s.xml">
       <configuration name="CustomerTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -465,17 +468,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Rental.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state>
           <folding>
             <element signature="e#589#590#0" expanded="true" />
             <element signature="e#614#615#0" expanded="true" />
@@ -489,7 +484,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/MovieCategories.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="644">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#453#454#0" expanded="true" />
             <element signature="e#483#484#0" expanded="true" />
@@ -501,12 +497,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Rental.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/refactor/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="27" column="86" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+        <state>
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
           </folding>
         </state>
       </provider>

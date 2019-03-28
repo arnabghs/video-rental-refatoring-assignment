@@ -3,4 +3,5 @@
 out/
 .idea
 *.ipr
-*.iws
+video-rental.iws
+video-rental.ipr

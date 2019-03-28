@@ -1,7 +1,6 @@
 package com.twu.refactor;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Customer {
 
@@ -16,31 +15,25 @@ public class Customer {
     rentalList.add(arg);
   }
 
-  public String getName() {
-    return name;
-  }
-
   public String statement() {
     double totalAmount = 0;
     int frequentRenterPoints = 0;
+    StringBuilder result = new StringBuilder("Rental Record for " + this.name + "\n");
 
-    Iterator<Rental> rentals = rentalList.iterator();
-    StringBuilder result = new StringBuilder("Rental Record for " + getName() + "\n");
-
-    while (rentals.hasNext()) {
-      Rental each = rentals.next();
-      int daysRented = each.getDaysRented();
-      Movie movie = each.getMovie();
+    for (Rental rental : rentalList) {
+      int daysRented = rental.getDaysRented();
+      Movie movie = rental.getMovie();
 
       double initialAmount = movie.getCategory().getInitialAmount();
       int baseDays = movie.getCategory().getBaseDays();
       double extraCharge = movie.getCategory().getExtraCharge();
       double thisAmount = calculateRent(initialAmount, daysRented, baseDays, extraCharge);
 
-      frequentRenterPoints += updateFrequentRenterPoints(each.getMovie(), daysRented);
-      result.append(appendEachMovieDetails(each.getMovie(), thisAmount));
+      result.append(appendEachMovieDetails(rental.getMovie(), thisAmount));
+      frequentRenterPoints += updateFrequentRenterPoints(rental.getMovie(), daysRented);
       totalAmount += thisAmount;
     }
+
     result.append(appendFooterLines(totalAmount, frequentRenterPoints));
     return result.toString();
   }
