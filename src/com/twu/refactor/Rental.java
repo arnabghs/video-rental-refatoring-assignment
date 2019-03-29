@@ -14,7 +14,7 @@ public class Rental {
     return movie.getTitle();
   }
 
-  double getRentForEachMovie() {
+  double getRent() {
     return movie.getRent(daysRented);
   }
 
