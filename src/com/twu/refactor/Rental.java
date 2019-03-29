@@ -19,7 +19,6 @@ public class Rental {
   }
 
   int updateFrequentRenterPoints() {
-    boolean isMovieNewlyReleased = this.movie.isNewlyReleased();
-    return (isMovieNewlyReleased && this.daysRented > 1) ? 2 : 1;
+    return (movie.isNewlyReleased() && this.daysRented > 1) ? 2 : 1;
   }
 }

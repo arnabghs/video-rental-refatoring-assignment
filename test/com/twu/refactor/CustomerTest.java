@@ -29,26 +29,26 @@ public class CustomerTest extends TestCase {
 
   public void testEmpty() throws Exception {
     dinsdale = new Customer("Dinsdale Pirhana");
-    equalsFile("1st Output", "outputEmpty", dinsdale.statement());
+    equalsFile("outputEmpty", dinsdale.statement());
   }
 
   public void testCustomer() throws Exception {
-    equalsFile("1st Output", "output1", dinsdale.statement());
+    equalsFile("output1", dinsdale.statement());
   }
 
   public void testChange() throws Exception {
     la.setCategory(MovieCategories.REGULAR);
-    equalsFile("1st Output", "outputChange", dinsdale.statement());
+    equalsFile("outputChange", dinsdale.statement());
   }
 
   public void testHtml() throws Exception {
-    equalsFile("1st Output", "outputHtml", dinsdale.htmlStatement());
+    equalsFile("outputHtml", dinsdale.htmlStatement());
   }
 
-  private void equalsFile(String message, String fileName, String actualValue) throws IOException {
+  private void equalsFile(String fileName, String actualValue) throws IOException {
     BufferedReader file = new BufferedReader(new FileReader(GOLD_PATH + '/' + fileName));
     BufferedReader actualStream = new BufferedReader(new StringReader(actualValue));
-    String thisFileLine = null;
+    String thisFileLine;
     while ((thisFileLine = file.readLine()) != null) {
       assertEquals("in file: " + fileName, thisFileLine, actualStream.readLine());
     }
