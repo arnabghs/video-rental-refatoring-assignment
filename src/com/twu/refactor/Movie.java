@@ -20,4 +20,8 @@ class Movie {
   String getTitle() {
     return title;
   }
+
+  double getRent(int daysRented) {
+    return this.category.calculateRent(daysRented);
+  }
 }

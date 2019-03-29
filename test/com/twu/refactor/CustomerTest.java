@@ -47,7 +47,7 @@ public class CustomerTest extends TestCase {
     }
     */
 
-  protected void equalsFile(String message, String fileName, String actualValue) throws IOException {
+  private void equalsFile(String message, String fileName, String actualValue) throws IOException {
     BufferedReader file = new BufferedReader(new FileReader(GOLD_PATH + '/' + fileName));
     BufferedReader actualStream = new BufferedReader(new StringReader(actualValue));
     String thisFileLine = null;

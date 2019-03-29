@@ -15,22 +15,7 @@ public class Rental {
   }
 
   double getRentForEachMovie() {
-    double initialAmount = movie.getCategory().getInitialAmount();
-    int baseDays = movie.getCategory().getBaseDays();
-    double extraCharge = movie.getCategory().getExtraCharge();
-    return calculateRent(initialAmount, baseDays, extraCharge);
-  }
-
-  private double chargeForExtraDays(int baseDays, double ratePerDay) {
-    if (daysRented > baseDays) {
-      return (daysRented - baseDays) * ratePerDay;
-    }
-    return 0;
-  }
-
-  private double calculateRent(double initialAmount, int baseDays, double extraCharge) {
-    double chargeForExtraDays = chargeForExtraDays(baseDays, extraCharge);
-    return initialAmount + chargeForExtraDays;
+    return movie.getRent(daysRented);
   }
 
   int updateFrequentRenterPoints() {
