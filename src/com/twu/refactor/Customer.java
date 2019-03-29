@@ -20,6 +20,12 @@ class Customer {
     return Statement.generateStatement(name, totalAmount, frequentRenterPoints, rentalList);
   }
 
+  String htmlStatement() {
+    double totalAmount = calculateTotalAmount();
+    int frequentRenterPoints = calculateTotalFrequencyPoints();
+    return Statement.generateHTMLStatement( name, rentalList, totalAmount,frequentRenterPoints);
+  }
+
   private double calculateTotalAmount() {
     return rentalList.stream().mapToDouble(Rental::getRentForEachMovie).sum();
   }
