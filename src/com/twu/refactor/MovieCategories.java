@@ -1,7 +1,7 @@
 package com.twu.refactor;
 
 public enum MovieCategories {
-  CHILDRENS(1.5, 3, 1.5),
+  CHILDREN(1.5, 3, 1.5),
   REGULAR(2, 2, 1.5),
   NEW_RELEASE(0, 0, 3);
 
@@ -25,5 +25,9 @@ public enum MovieCategories {
       return (daysRented - this.baseDays) * this.extraCharge;
     }
     return 0;
+  }
+
+  public boolean isNewlyReleased() {
+    return this == NEW_RELEASE;
   }
 }

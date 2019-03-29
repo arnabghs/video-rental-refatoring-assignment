@@ -3,7 +3,6 @@ package com.twu.refactor;
 import java.util.ArrayList;
 
 class Customer {
-
   private String name;
   private ArrayList<Rental> rentalList = new ArrayList<>();
 

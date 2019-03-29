@@ -9,10 +9,6 @@ class Movie {
     this.category = category;
   }
 
-  MovieCategories getCategory() {
-    return category;
-  }
-
   void setCategory(MovieCategories category) {
     this.category = category;
   }
@@ -23,5 +19,9 @@ class Movie {
 
   double getRent(int daysRented) {
     return this.category.calculateRent(daysRented);
+  }
+
+  boolean isNewlyReleased() {
+    return category.isNewlyReleased();
   }
 }

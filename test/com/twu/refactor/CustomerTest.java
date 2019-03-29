@@ -17,7 +17,7 @@ public class CustomerTest extends TestCase {
   private Movie ran = new Movie("Ran", MovieCategories.REGULAR);
   private Movie la = new Movie("LA Confidential", MovieCategories.NEW_RELEASE);
   private Movie trek = new Movie("Star Trek 13.2", MovieCategories.NEW_RELEASE);
-  private Movie wallace = new Movie("Wallace and Gromit", MovieCategories.CHILDRENS);
+  private Movie wallace = new Movie("Wallace and Gromit", MovieCategories.CHILDREN);
 
   public void setUp() {
     dinsdale.addRental(new Rental(python, 3));

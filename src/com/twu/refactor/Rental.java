@@ -19,9 +19,7 @@ public class Rental {
   }
 
   int updateFrequentRenterPoints() {
-    if ((this.movie.getCategory() == MovieCategories.NEW_RELEASE) && this.daysRented > 1) {
-      return 2;
-    }
-    return 1;
+    boolean isNewlyReleased = this.movie.isNewlyReleased();
+    return (isNewlyReleased && this.daysRented > 1) ? 2 : 1;
   }
 }
