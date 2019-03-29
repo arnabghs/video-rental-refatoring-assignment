@@ -15,27 +15,16 @@ class Customer {
   }
 
   String statement() {
-    double totalAmount = 0;
-    int frequentRenterPoints = 0;
-    StringBuilder result = new StringBuilder("Rental Record for " + this.name + "\n");
-
-    for (Rental rental : rentalList) {
-      String movieName = rental.getMovieTitle();
-      double movieRent = rental.getRentForEachMovie();
-
-      result.append(appendEachMovieDetails(movieName, movieRent));
-      frequentRenterPoints += rental.updateFrequentRenterPoints();
-      totalAmount += movieRent;
-    }
-    result.append(appendFooterLines(totalAmount, frequentRenterPoints));
-    return result.toString();
+    double totalAmount = calculateTotalAmount();
+    int frequentRenterPoints = calculateTotalFrequencyPoints();
+    return Statement.generateStatement(name, totalAmount, frequentRenterPoints, rentalList);
   }
 
-  private String appendFooterLines(double totalAmount, int frequentRenterPoints) {
-    return "Amount owed is " + totalAmount + "\nYou earned " + frequentRenterPoints + " frequent renter points";
+  private double calculateTotalAmount() {
+    return rentalList.stream().mapToDouble(Rental::getRentForEachMovie).sum();
   }
 
-  private String appendEachMovieDetails(String movieName, double thisAmount) {
-    return "\t" + movieName + "\t" + thisAmount + "\n";
+  private int calculateTotalFrequencyPoints() {
+    return rentalList.stream().mapToInt(Rental::updateFrequentRenterPoints).sum();
   }
 }
